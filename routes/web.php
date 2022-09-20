@@ -6,9 +6,9 @@ Route::redirect('/home', '/admin');
 Auth::routes(['register' => false]);
 Route::get('/login/google', 'Auth\LoginController@redirectToProvider');
 
-Route::get('/logout', 'App\Http\Controllers\Auth\LoginController@Logout');
-Route::get('/login/google/callback', 'App\Http\Controllers\Auth\LoginController@handleProviderCallback');
-Route::get('/logout','App\Http\Controllers\Auth\LoginController@logout');
+Route::get('/logout', 'Auth\LoginController@Logout');
+Route::get('/login/google/callback', 'Auth\LoginController@handleProviderCallback');
+Route::get('/logout','Auth\LoginController@logout');
 
 Route::get('/', 'HomeController@index')->name('home');
 Route::get('categories/check_slug', 'CategoryController@check_slug')->name('categories.check_slug');
