@@ -2,7 +2,7 @@
 
 use Laravel\Socialite\Facades\Socialite;
 
-Route::redirect('/home', '/admin');
+Route::redirect('/home', '/knowledgebase/admin');
 Auth::routes(['register' => false]);
 Route::get('/login/google', 'Auth\LoginController@redirectToProvider');
 
