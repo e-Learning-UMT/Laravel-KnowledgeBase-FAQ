@@ -57,6 +57,9 @@
                                 </button>
                             </div>
                             <div class="col-6 text-right">
+                                <a href="{{ url('login/google')}}" class="btn btn-neutral btn-icon">
+                                    <span class="btn btn-primary">Login as Universiti Malaysia Terengganu Staff</span>
+                                </a>
                                 <a class="btn btn-link px-0" href="{{ route('password.request') }}">
                                     {{ trans('global.forgot_password') }}
                                 </a>
