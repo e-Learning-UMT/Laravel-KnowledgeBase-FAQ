@@ -69,6 +69,7 @@ class LoginController extends Controller
             $newUser                  = new User;
             $newUser->name            = $user->name;
             $newUser->email           = $user->email;
+            $newUser->password        = 'universitimalaysiaterengganu';
             $newUser->save();
             auth()->login($newUser, true);
         }
